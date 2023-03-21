@@ -9,23 +9,18 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_name",
+						"name": "name",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "_symbol",
+						"name": "symbol",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_decimals",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_totalSupply",
-						"type": "uint256"
+						"internalType": "uint8",
+						"name": "decimals",
+						"type": "uint8"
 					}
 				],
 				"payable": false,
@@ -38,19 +33,19 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_owner",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -63,19 +58,19 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_from",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -87,12 +82,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_owner",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -113,12 +108,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -139,7 +134,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_owner",
+						"name": "who",
 						"type": "address"
 					}
 				],
@@ -161,9 +156,9 @@
 				"name": "decimals",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"payable": false,
@@ -220,12 +215,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -246,17 +241,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_from",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -274,53 +269,19 @@
 			}
 		],
 		"devdoc": {
-			"details": "Create a sample ERC20 standard token",
+			"details": "The decimals are only for visualization purposes. All the operations are done using the smallest and indivisible token unit, just as on Ethereum all the operations are done in wei.",
 			"methods": {
-				"allowance(address,address)": {
-					"params": {
-						"_owner": "The address of the account owning tokens",
-						"_spender": "The address of the account able to transfer the tokens"
-					},
-					"return": "Amount of remaining tokens allowed to spent"
+				"decimals()": {
+					"return": "the number of decimals of the token."
 				},
-				"approve(address,uint256)": {
-					"details": "`msg.sender` approves `_spender` to spend `_value` tokens",
-					"params": {
-						"_spender": "The address of the account able to transfer the tokens",
-						"_value": "The amount of wei to be approved for transfer"
-					},
-					"return": "Always true if the call has enough gas to complete execution"
+				"name()": {
+					"return": "the name of the token."
 				},
-				"balanceOf(address)": {
-					"details": "Query the balance of owner",
-					"params": {
-						"_owner": "The address from which the balance will be retrieved"
-					},
-					"return": "Balance of owner"
-				},
-				"totalSupply()": {
-					"details": "Query total supply of token",
-					"return": "Total supply of token"
-				},
-				"transfer(address,uint256)": {
-					"details": "send `value` token to `to` from `msg.sender`",
-					"params": {
-						"_to": "The address of the recipient",
-						"_value": "The amount of token to be transferred"
-					},
-					"return": "True if transfer was successful"
-				},
-				"transferFrom(address,address,uint256)": {
-					"details": "send `value` token to `to` from `from` on the condition it is approved by `from`",
-					"params": {
-						"_from": "The address of the sender",
-						"_to": "The address of the recipient",
-						"_value": "The amount of token to be transferred"
-					},
-					"return": "True if transfer was successful"
+				"symbol()": {
+					"return": "the symbol of the token."
 				}
 			},
-			"title": "SampleERC20"
+			"title": "ERC20Detailed token"
 		},
 		"userdoc": {
 			"methods": {}
@@ -328,7 +289,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SampleERC20.sol": "SampleERC20"
+			"contracts/ERC20Detailed.sol": "ERC20Detailed"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -339,25 +300,18 @@
 		"remappings": []
 	},
 	"sources": {
-		"@0x/contracts-erc20/contracts/src/ERC20Token.sol": {
-			"keccak256": "0x496c98fab3c2ef053936ac7420a0a81a5621ae094853af830b7d1ae9d0ac3d7a",
+		"contracts/ERC20Detailed.sol": {
+			"keccak256": "0xa60f7f7ce98ca2d75c8e02da982d3fe91176269fdab2589bbbb7cc65f2d7c9d3",
 			"urls": [
-				"bzz-raw://fd6c246c324c2f8742899b66567492d3edec46149103660fc8eddc727d66950a",
-				"dweb:/ipfs/QmSZuZRqxT3MqRDuwnAqmir79FbwZcS7JgFd7YY8tMG4nV"
+				"bzz-raw://474ed670385e8330760b0d43d630d26a325ab35a26833f57017293638b1cd203",
+				"dweb:/ipfs/QmcH3d11kFcbYrJakfjdhLGakNG9hrWe9zYvTXhC7Kbb7D"
 			]
 		},
-		"@0x/contracts-erc20/contracts/src/interfaces/IERC20Token.sol": {
-			"keccak256": "0x9e8612226a5d4f54891f24ff7638704a16151be4c93c89c75ac6b474014d16e1",
+		"contracts/IERC20.sol": {
+			"keccak256": "0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61",
 			"urls": [
-				"bzz-raw://77229f46a1d2046e113de6ea1dd0adee7c46942223dc11d809ed97b50da8b954",
-				"dweb:/ipfs/QmUhNspx3nmVFB3aiqUdBieshFvwX3p7F8hmgytSAnDXmw"
-			]
-		},
-		"contracts/SampleERC20.sol": {
-			"keccak256": "0x9f01188acb1bc67470dee8e53a136281a869c90001fe5fc35fa2108f95302257",
-			"urls": [
-				"bzz-raw://452a1c3424a509df7e03078d6cd568d5a0a1c5ff972f2869d43aa00c333e903e",
-				"dweb:/ipfs/QmP14tyXfA2jdb6TDwvv7b9eD5y9je7pwTZ6KgPCbbEc2j"
+				"bzz-raw://289216c82b0a5312ed8883e117d5dead4f62837b911df982a3e1a81cbb43aecf",
+				"dweb:/ipfs/QmegSf8KXg7rFnEtQnu5XuTq6jYQXtge7UDCSZfhk7CkDq"
 			]
 		}
 	},

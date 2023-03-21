@@ -9,7 +9,7 @@ import "@0x/contracts-erc20/contracts/src/ERC20Token.sol";
  * @dev Create a sample ERC20 standard token
  */
 contract SampleERC20 is ERC20Token {
-
+    
     string public name;
     string public symbol;
     uint256 public decimals;

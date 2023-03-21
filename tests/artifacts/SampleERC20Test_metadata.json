@@ -59,10 +59,10 @@
 			]
 		},
 		"contracts/SampleERC20.sol": {
-			"keccak256": "0x924648f606e841d8637009f740f9c6330e3abf3ad274fe03ae872ccd1c04cdc1",
+			"keccak256": "0x9f01188acb1bc67470dee8e53a136281a869c90001fe5fc35fa2108f95302257",
 			"urls": [
-				"bzz-raw://6732428f73d72825af1f80334cead81b951664046f7f1451d33b93443b22f30e",
-				"dweb:/ipfs/QmWfbQtBPRPFvyxpPpQhSUNrFBrV83K2db53mpGU47ut4r"
+				"bzz-raw://452a1c3424a509df7e03078d6cd568d5a0a1c5ff972f2869d43aa00c333e903e",
+				"dweb:/ipfs/QmP14tyXfA2jdb6TDwvv7b9eD5y9je7pwTZ6KgPCbbEc2j"
 			]
 		},
 		"remix_tests.sol": {

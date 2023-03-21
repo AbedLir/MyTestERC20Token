@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"author": "Remco Bloemen <remco@2π.com>, Eenae <alexey@mixbytes.io>",
+			"details": "If you mark a function `nonReentrant`, you should also mark it `external`.",
+			"methods": {},
+			"title": "Helps contracts guard against reentrancy attacks."
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ReentrancyGuard.sol": "ReentrancyGuard"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ReentrancyGuard.sol": {
+			"keccak256": "0x080fa336eb92fca1f96bf5c7738b6ef6e23582809d81868e9498c08e1207c125",
+			"urls": [
+				"bzz-raw://3a0d0d9fda879d3dbf20065ce1cb24188d1c66955b88b5b796584f9afc1c7600",
+				"dweb:/ipfs/QmNTxvr3o1CNDvwrfD996h45RQMmJq9bmw2Adp6wGQNeXd"
+			]
+		}
+	},
+	"version": 1
+}
